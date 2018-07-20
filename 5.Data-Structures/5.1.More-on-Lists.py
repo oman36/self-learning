@@ -60,3 +60,7 @@ print([[row[col] for row in matrix] for col in range(len(matrix[0]))])
 print(list(zip(*matrix)))
 # [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
+# unpacking:
+row1, row2, row3 = matrix
+print(row2)
+# [5, 6, 7, 8]
