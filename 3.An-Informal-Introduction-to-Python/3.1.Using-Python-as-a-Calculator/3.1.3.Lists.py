@@ -22,12 +22,12 @@ print(squares)
 # [1, 4, 36, 16, 25, 49]
 
 # You can replace some values:
-squares[2:4] = [64, 81]
+squares[2:4] = [101, 102, 103]
 print(squares)
-# [1, 4, 64, 81, 25, 49]
+# [1, 4, 101, 102, 103, 25, 49]
 
 # You can remove some values:
 squares[2:4] = []
 print(squares)
-# [1, 4, 25, 49]
+# [1, 4, 103, 25, 49]
 
