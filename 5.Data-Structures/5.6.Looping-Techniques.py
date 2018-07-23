@@ -14,7 +14,7 @@ for i, v in enumerate(['tic', 'tac', 'toe']):
 # 2 toe
 
 # To loop over two or more sequences at the same time,
-#  the entries can be paired with the zip() function:
+# the entries can be paired with the zip() function:
 questions = ['name', 'quest', 'favorite color']
 answers = ['lancelot', 'the holy grail', 'blue']
 for q, a in zip(questions, answers):

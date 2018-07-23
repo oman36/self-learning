@@ -14,3 +14,4 @@ def parrot(voltage, state='a stiff', action='voom'):
 
 d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
 parrot(**d)
+# -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !

@@ -17,7 +17,7 @@ print(combs)
 vec = [-4, -2, 0, 2, 4]
 
 # create a new list with the values doubled:
-print([x*2 for x in vec])
+print([x * 2 for x in vec])
 # [-8, -4, 0, 4, 8]
 
 # filter the list to exclude negative numbers:
@@ -33,7 +33,7 @@ print([number.zfill(6) for number in ['1', '20', '340']])
 # ['000001', '000020', '000340']
 
 # create a list of 2-tuples like (number, square)
-print([(x, x**2) for x in range(6)])
+print([(x, x ** 2) for x in range(6)])
 # [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
 
 # the tuple must be parenthesized, otherwise an error is raised:
@@ -42,8 +42,8 @@ print([(x, x**2) for x in range(6)])
 #
 
 
-# flatten a list using a listcomp with two 'for'
-print([num for elem in [[1,2,3], [4,5,6], [7,8,9]] for num in elem])
+# flatten a list using a list comp with two 'for'
+print([num for elem in [[1, 2, 3], [4, 5, 6], [7, 8, 9]] for num in elem])
 # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 

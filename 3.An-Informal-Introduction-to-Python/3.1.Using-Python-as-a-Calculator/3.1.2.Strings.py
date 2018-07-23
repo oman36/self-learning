@@ -21,7 +21,7 @@ Usage: thingy [OPTIONS]
 # String leterals can be concatenated without '+'
 'one ' 'two' == 'one two'
 
-#This feature is particulary useful when you want to break long strings:
+# This feature is particulary useful when you want to break long strings:
 text = ('Put several strings within parentheses '
         'to have them joined together.')
 
@@ -37,3 +37,9 @@ word[42:45] == ''
 # The built-in function len() returns the length of a string:
 len(word) == 6
 
+# stings are immutable:
+try:
+    word[2] = 'h'
+except TypeError as e:
+    print(e.__str__() == "'str' object does not support item assignment")
+    # True
