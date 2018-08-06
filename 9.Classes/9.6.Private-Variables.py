@@ -17,6 +17,15 @@ class MappingName:
     __update = update
 
 
+class MappingSubclass(Mapping):
+
+    def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+
 print('__update' in dir(MappingName))
 # False
 
