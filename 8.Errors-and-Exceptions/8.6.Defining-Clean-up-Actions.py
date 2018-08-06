@@ -26,5 +26,5 @@ divide("2", "1")
 #     result = x / y
 # TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
-# In real world applications, the finally clause is useful for releasing external resources (such as files or network
+# In real world applications, the `finally` clause is useful for releasing external resources (such as files or network
 # connections), regardless of whether the use of the resource was successful.

@@ -14,7 +14,7 @@ b = set('alacazam')
 print(a)
 # {'a', 'r', 'b', 'c', 'd'}
 
-# letters in a or in b
+# letters in a and not in b
 print(a - b)
 # {'r', 'd', 'b'}
 

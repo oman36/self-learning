@@ -52,7 +52,7 @@ for name, phone in table.items():
 animals = 'eels'
 print(f'My hovercraft is full of {animals}.')
 # My hovercraft is full of eels.
-print('My hovercraft is full of {animals !r}.')
+print(f'My hovercraft is full of {animals !r}.')
 # My hovercraft is full of 'eels'.
 
 print('We are the {} who say "{}!"'.format('knights', 'Ni'))
@@ -68,10 +68,7 @@ print('{1} and {0}'.format('spam', 'eggs'))
 # eggs and spam
 
 print('This {food} is {adjective}.'.format(food='egg', adjective='absolutely horrible'))
-# This egg is absolutely
-
-print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred', other='Georg'))
-# The story of Bill, Manfred, and Georg.
+# This egg is absolutely horrible
 
 print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred', other='Georg'))
 # The story of Bill, Manfred, and Georg.

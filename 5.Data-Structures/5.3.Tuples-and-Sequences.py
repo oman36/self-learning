@@ -29,6 +29,7 @@ print(y)
 empty = ()
 print(empty)
 # ()
+
 singleton = 1,
 print(singleton)
 # (1,)
