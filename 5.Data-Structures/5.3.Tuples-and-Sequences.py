@@ -19,10 +19,12 @@ except TypeError as t_error:
 # but they can contain mutable objects:
 v = ([1, 2, 3], [3, 2, 1])
 print(v)
+# ([1, 2, 3], [3, 2, 1])
 
 x, y, z = t
 print(x)
 # 12345
+
 print(y)
 # 54321
 

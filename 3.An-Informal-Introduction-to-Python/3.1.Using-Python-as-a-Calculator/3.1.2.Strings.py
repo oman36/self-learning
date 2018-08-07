@@ -41,5 +41,5 @@ len(word) == 6
 try:
     word[2] = 'h'
 except TypeError as e:
-    print(e.__str__() == "'str' object does not support item assignment")
-    # True
+    print(e.__str__())
+# 'str' object does not support item assignment

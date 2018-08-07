@@ -10,7 +10,8 @@ some_module.defined_in_init_func()
 try:
     some_module.defined_in_file_func()
 except AttributeError as error:
-    print(error.__str__() == "module 'main_package.some_module' has no attribute 'defined_in_file_func'")
+    print(error.__str__())
+# module 'main_package.some_module' has no attribute 'defined_in_file_func'
 
 print(valid_module.variable)
 # 120
@@ -19,7 +20,8 @@ print(valid_module.variable)
 try:
     not_defined_module.exist_func()
 except NameError as error:
-    print(error.__str__() == "name 'not_defined_module' is not defined")
+    print(error.__str__())
+# name 'not_defined_module' is not defined
 
 # But we can load the module directly:
 from main_package import not_defined_module
@@ -30,7 +32,8 @@ not_defined_module.exist_func()
 try:
     sub_package.some_nasted_module.another_func()
 except AttributeError as error:
-    print(error.__str__() == "module 'main_package.sub_package' has no attribute 'some_nasted_module'")
+    print(error.__str__())
+# module 'main_package.sub_package' has no attribute 'some_nasted_module'
 
 # every sub package should be loaded manually:
 from main_package.sub_package import *

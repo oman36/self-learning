@@ -1,3 +1,3 @@
-from . import the_module
+import the_module
 print('first', the_module.variable)
 the_module.variable = 43

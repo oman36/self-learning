@@ -28,7 +28,8 @@ print(dir())
 # ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'fibo',
 # 'sys']
 
-# dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module `builtins`:
+# dir() does not list the names of built-in functions and variables.
+# If you want a list of those, they are defined in the standard module `builtins`:
 import builtins
 print(dir(builtins))
 # ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',

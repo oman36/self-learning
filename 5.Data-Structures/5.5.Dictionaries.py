@@ -50,6 +50,7 @@ print(
     ==
     dict(sape=4139, guido=4127, jack=4098)
 )
+# True
 
 # dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
 print({x: x**2 for x in (2, 4, 6)})

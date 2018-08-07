@@ -73,7 +73,7 @@ try:
         print("Could not convert data to an integer.")
     except:
         print("Unexpected error:", sys.exc_info()[0])
-        raise  # last error wil be raised
+        raise  # last error will be raised
 except:
     pass
 # Unexpected error: <class 'ZeroDivisionError'>

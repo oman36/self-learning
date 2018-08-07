@@ -18,4 +18,7 @@ def fib2(n):   # return Fibonacci series up to n
 if __name__ == "__main__":
     # this condition will be execute if this file (fibo.py) will be called directly, not by import
     import sys
-    fib(int(sys.argv[1]))
+    if len(sys.argv) == 1:
+        print('Error: need count of values as second argument')
+    else:
+        fib(int(sys.argv[1]))

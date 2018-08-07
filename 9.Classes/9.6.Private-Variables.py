@@ -17,7 +17,7 @@ class MappingName:
     __update = update
 
 
-class MappingSubclass(Mapping):
+class MappingSubclass(MappingName):
 
     def update(self, keys, values):
         # provides new signature for update()
@@ -30,7 +30,4 @@ print('__update' in dir(MappingName))
 # False
 
 print('_MappingName__update' in dir(MappingName))
-# True
-
-print(MappingName.__dict__)
 # True
