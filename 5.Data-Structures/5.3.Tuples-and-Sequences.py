@@ -14,7 +14,8 @@ print(u)
 try:
     t[0] = 88888
 except TypeError as t_error:
-    print('Caught: {}'.format(t_error))
+    print(t_error.__str__())
+# 'tuple' object does not support item assignment
 
 # but they can contain mutable objects:
 v = ([1, 2, 3], [3, 2, 1])

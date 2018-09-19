@@ -17,4 +17,5 @@ del a
 try:
     print(a)
 except NameError as err:
-    print("name 'a' is not defined" == err.__str__())
+    print(err.__str__())
+# name 'a' is not defined

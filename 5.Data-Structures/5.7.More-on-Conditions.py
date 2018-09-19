@@ -9,8 +9,6 @@ print(3 is 3)
 
 # this only matters for mutable objects like lists:
 print([3] is [3])
-
-
 # False
 
 # Comparisons can be chained.

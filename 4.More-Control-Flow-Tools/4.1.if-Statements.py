@@ -9,3 +9,6 @@ elif x == 1:
     print('Single')
 else:
     print('More')
+
+data = None
+data = {} if data is None else data

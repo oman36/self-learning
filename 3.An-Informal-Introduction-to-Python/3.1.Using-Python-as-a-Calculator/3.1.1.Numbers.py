@@ -8,12 +8,12 @@ print(17 / 3)  # 3 * 5 + 2 = 17; 2/3 = 0.6666..67
 # 5.66666..67
 print(17 // 3)  # floor division discards the factorial part
 # 5
-print((17 // 3).__class__)  # floor division discards the factorial part
+print((17 // 3).__class__)
 # <class 'int'>
 print(17 % 3)  # 3 * 5 + 2 = 17
-print((17 // 3).__class__)  # floor division discards the factorial part
-# <class 'int'>
 # 2
+print((17 % 3).__class__)
+# <class 'int'>
 print(2 ** 7)  # 2 to the power of 7
 # 128
 
