@@ -13,7 +13,7 @@ print(a)
 # []
 
 del a
-# Referencing the name a hereafter is an error
+# Referencing the name a here after is an error
 try:
     print(a)
 except NameError as err:

@@ -27,15 +27,28 @@ text = ('Put several strings within parentheses '
 
 # Strings can be indexed
 word = 'Python'
-word[1] == 'y'
-word[0] == 'P'
-word[-0] == 'P'
-word[-1] == 'n'
-word[2:5] == 'tho'
-word[42:45] == ''
+print(word[1])
+# y
+
+print(word[0])
+# P
+
+print(word[-0])
+# P
+
+print(word[-1])
+# n
+
+print(word[2:5])
+# tho
+
+print(word[42:45])
+# 
+
 
 # The built-in function len() returns the length of a string:
-len(word) == 6
+print(len(word))
+# 6
 
 # stings are immutable:
 try:

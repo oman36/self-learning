@@ -3,7 +3,7 @@ print(t[0])
 # 12345
 
 print(t)
-# (12345. 54321, 'hello!')
+# (12345, 54321, 'hello!')
 
 # Tuples may be nested:
 u = t, (1, 2, 3, 4, 5)

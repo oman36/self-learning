@@ -5,7 +5,7 @@ f = open(__file__, 'r')
 # to just \n. When writing in text mode, the default is to convert occurrences of \n back to platform-specific line
 # endings.
 
-# It is good practice to use the with keyword when dealing with file objects.
+# It is good practice to use the `with` keyword when dealing with file objects.
 # The advantage is that the file is properly closed after its suite finishes,
 # even if an exception is raised at some point.
 # Using with is also much shorter than writing equivalent try-finally blocks:
@@ -14,7 +14,7 @@ with open('/etc/hosts', 'r') as f2:
 print(f2.closed)
 # True
 
-# If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any
+# If you’re not using the `with` keyword, then you should call f.close() to close the file and immediately free up any
 # system resources used by it. If you don’t explicitly close a file, Python’s garbage collector will eventually
 # destroy the object and close the open file for you, but the file may stay open for a while. Another risk is that
 # different Python implementations will do this clean-up at different times.

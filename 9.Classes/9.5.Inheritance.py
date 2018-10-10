@@ -41,15 +41,10 @@ print(isinstance(obj, BaseClass))
 print(issubclass(SubClass, BaseClass))
 # True
 
-print(issubclass(SubClass, BaseClass))
-# True
-
 print(issubclass(SubClass, SomeClass))
 # False
 
 print(issubclass(BaseClass, SubClass))
-
-
 # False
 
 

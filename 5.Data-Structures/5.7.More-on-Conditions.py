@@ -7,8 +7,12 @@ print([3] == [3])
 print(3 is 3)
 # True
 
-# this only matters for mutable objects like lists:
+# this only matters for objects:
 print([3] is [3])
+# False
+
+# every tuple are unique:
+print((3, 2) is (3, 2))
 # False
 
 # Comparisons can be chained.
@@ -39,6 +43,6 @@ empty_list = []
 
 string2, string3 = 'Trondheim', 'Hammer Dance'
 
-non_null = (empty_string or the_none or zero or empty_set or empty_tuple or empty_list or string2 or string3)
+non_null = empty_string or the_none or zero or empty_set or empty_tuple or empty_list or string2 or string3
 print(non_null)
 # Trondheim
