@@ -38,7 +38,18 @@ print(isinstance(obj, SubClass))
 print(isinstance(obj, BaseClass))
 # True
 
+# You can check if object is instance of any type from tuple
+print(isinstance(obj, (BaseClass, float, int)))
+# True
+
+print(isinstance(obj, (float, int)))
+# False
+
 print(issubclass(SubClass, BaseClass))
+# True
+
+# You can check if object is subclass of any class from tuple
+print(issubclass(SubClass, (BaseClass, float)))
 # True
 
 print(issubclass(SubClass, SomeClass))
