@@ -123,13 +123,13 @@ def asserts(*arg_types, **kwarg_types):
                 if n >= len(arg_types):
                     break
                 if not isinstance(arg, arg_types[n]):
-                    raise RuntimeError('Argument #{} should be {}, but {} given'.format(n, arg_types[n], type(arg)))
+                    raise ValueError('Argument #{} should be {}, but {} given'.format(n, arg_types[n], type(arg)))
 
             for n, arg in kwargs.items():
                 if n not in kwarg_types:
                     continue
                 if not isinstance(arg, kwarg_types[n]):
-                    raise RuntimeError('Named argument "{}" should be {}, but {} given'.format(n, kwarg_types[n], type(arg)))
+                    raise ValueError('Named argument "{}" should be {}, but {} given'.format(n, kwarg_types[n], type(arg)))
 
             return func(*args, **kwargs)
         return wrapped
@@ -142,18 +142,18 @@ def returns(*returns_types):
             result = func(*args, **kwargs)
             if len(returns_types) > 1:
                 if not isinstance(result, tuple):
-                    raise RuntimeError('Function should to returns tuple of values, but one value was returned')
+                    raise ValueError('Function should to returns tuple of values, but one value was returned')
                 if len(returns_types) != len(result):
-                    raise RuntimeError('Function should to returns {} values, but returns {}'.format(
+                    raise ValueError('Function should to returns {} values, but returns {}'.format(
                         len(returns_types), len(result))
                     )
 
                 for n, value in enumerate(result):
                     if not isinstance(value, returns_types[n]):
-                        raise RuntimeError('Value #{} should be {}, but {} returned'.format(n, returns_types[n], type(value)))
+                        raise ValueError('Value #{} should be {}, but {} returned'.format(n, returns_types[n], type(value)))
             else:
                 if not isinstance(result, returns_types[0]):
-                    raise RuntimeError(
+                    raise ValueError(
                         'Value should be {}, but {} returned'.format(returns_types, type(result)))
 
             return result
