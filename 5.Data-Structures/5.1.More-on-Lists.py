@@ -73,3 +73,20 @@ print(list(zip(*broken_matrix)))
 row1, row2, row3 = matrix
 print(row2)
 # [5, 6, 7, 8]
+
+# lists can be multiplied (their values will be repeated), but it not safe
+danger_list = [{'value': 'original'}] * 3
+safe_list = [{'value': 'original'} for _ in range(3)]
+
+print(danger_list)
+# [{'value': 'original'}, {'value': 'original'}, {'value': 'original'}]
+print(safe_list)
+# [{'value': 'original'}, {'value': 'original'}, {'value': 'original'}]
+
+danger_list[0]['value'] = 'new'
+print(danger_list)
+# [{'value': 'new'}, {'value': 'new'}, {'value': 'new'}]
+
+safe_list[0]['value'] = 'new'
+print(safe_list)
+# [{'value': 'new'}, {'value': 'original'}, {'value': 'original'}]
