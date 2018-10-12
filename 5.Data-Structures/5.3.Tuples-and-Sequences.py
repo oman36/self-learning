@@ -36,3 +36,11 @@ print(empty)
 singleton = 1,
 print(singleton)
 # (1,)
+
+iterator = (char for char in 'hello')
+print(iterator)
+# <generator object <genexpr> at 0x7f367da22570>
+
+tuple_of_chars = tuple(char for char in 'hello')
+print(tuple_of_chars)
+# ('h', 'e', 'l', 'l', 'o')
