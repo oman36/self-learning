@@ -55,3 +55,46 @@ print(
 # dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
 print({x: x**2 for x in (2, 4, 6)})
 # {2: 4, 4: 16, 6: 36}
+
+# !!! IMPORTANT !!!
+print({True: 'a', 1: 'b', 1.0: 'c'})
+# {True: 'c'}
+
+
+class Base:
+    def __init__(self, value):
+        self.value = value
+
+    def __repr__(self):
+        return repr(self.value)
+
+
+class HashBroken(Base):
+    def __hash__(self):
+        return 1
+
+
+class EqBroken(Base):
+    def __eq__(self, other):
+        return True
+
+    def __hash__(self):
+        return hash(self.value)
+
+
+class Broken(Base):
+    def __hash__(self):
+        return 1
+
+    def __eq__(self, other):
+        return True
+
+
+print({HashBroken('z'): 'a', HashBroken('x'): 'b'})
+# {'z': 'a', 'x': 'b'}
+
+print({EqBroken('z'): 'a', EqBroken('x'): 'b'})
+# {'z': 'a', 'x': 'b'}
+
+print({Broken('z'): 'a', Broken('x'): 'b'})
+# {'z': 'b'}
