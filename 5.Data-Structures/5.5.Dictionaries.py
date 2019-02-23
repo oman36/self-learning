@@ -53,7 +53,7 @@ print(
 # True
 
 # dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
-print({x: x**2 for x in (2, 4, 6)})
+print({x: x ** 2 for x in (2, 4, 6)})
 # {2: 4, 4: 16, 6: 36}
 
 # !!! IMPORTANT !!!
@@ -98,3 +98,9 @@ print({EqBroken('z'): 'a', EqBroken('x'): 'b'})
 
 print({Broken('z'): 'a', Broken('x'): 'b'})
 # {'z': 'b'}
+
+try:
+    print({tuple([1, 2, 3, [4, 5]]): 'value'})
+except TypeError as e:
+    print(e.__str__())
+# unhashable type: 'list'
