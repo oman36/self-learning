@@ -3,13 +3,9 @@
 
 # decorator should to return decorated function instead of result
 def decorator(func):
-
     def wrapper(*args, **kwargs):
-
         print('Start')
-
         result = func(*args, **kwargs)
-
         print('Finish')
 
         return result
@@ -19,15 +15,10 @@ def decorator(func):
 
 # If you use universal decorator, you should to use complex decorator
 def decorator_with_args(start_word='Begin', finish_word='End'):
-
     def arg_wrapper(func):
-
         def wrapper(*args, **kwargs):
-
             print(start_word)
-
             result = func(*args, **kwargs)
-
             print(finish_word)
 
             return result
