@@ -26,5 +26,8 @@ for q, a in zip(questions, answers):
 # To loop over a sequence in reverse, first specify the sequence in a forward direction
 # and then call the reversed() function.
 
+print(reversed(questions).__class__)
+# <class 'list_reverseiterator'>
+
 # To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving
 # the source unaltered.
