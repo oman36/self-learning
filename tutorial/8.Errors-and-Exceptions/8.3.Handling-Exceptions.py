@@ -107,3 +107,16 @@ except (Exception, TypeError) as inst:
 # ('spam', 'eggs')
 # x = spam
 # y = eggs
+
+# The return value of a function is determined by the last return statement executed.
+# Since the finally clause always executes, a return statement executed in the finally clause
+# will always be the last one executed:
+def foo():
+    try:
+        return 'try'
+    finally:
+        return 'finally'
+
+
+print(foo())
+# finally
