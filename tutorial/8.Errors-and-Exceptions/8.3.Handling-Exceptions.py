@@ -8,13 +8,12 @@ import random
 
 try:
     if 0 == random.randint(0, 1):
-        print('NaN')
         x = int('NaN')
     else:
-        print('2 / 0')
         x = 2 / 0
 except (ValueError, ZeroDivisionError):
     print("Any of error from tuple will be handled")
+# Any of error from tuple will be handled
 
 
 class B(Exception):
