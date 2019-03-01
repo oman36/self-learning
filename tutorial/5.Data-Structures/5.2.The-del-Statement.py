@@ -19,3 +19,15 @@ try:
 except NameError as err:
     print(err.__str__())
 # name 'a' is not defined
+
+
+def func():
+    try:
+        print(b)
+    except UnboundLocalError as err:
+        print(err.__str__())
+    b = 3
+
+# in functions only
+func()
+# local variable 'b' referenced before assignment
