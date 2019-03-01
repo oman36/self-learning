@@ -75,3 +75,39 @@ print(files['main'].closed)
 
 print(next(generator_2('test')))
 # hei 0
+
+
+def manual_generator(initial=0):
+    print("Execution starts when 'next()' is called for the first time.")
+    try:
+        while True:
+            try:
+                new = yield initial
+                initial += 1 + (new or 0)
+            except Exception as e:
+                print('Error: ' + e.__str__())
+    finally:
+        print("Don't forget to clean up when 'close()' is called.")
+
+
+generator = manual_generator(10)
+print(next(generator))
+# 10
+print(generator.send(-2))
+# 9
+print(next(generator))
+# 10
+print(generator.send(None))
+# 11
+print(next(generator))
+# 12
+print(generator.send(7))
+# 20
+print(next(generator))
+# 21
+generator.throw(TypeError, "spam")
+# Error: spam
+print(next(generator))
+# 22
+generator.close()
+# Don't forget to clean up when 'close()' is called.
