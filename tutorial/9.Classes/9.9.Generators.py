@@ -6,10 +6,23 @@ def reverse(data):
 print(reverse)
 # <function reverse at 0x7fd1fdb6de18>
 
-print(reverse("Word"))
+golf = reverse('golf')
+print(golf)
 # <generator object reverse at 0x7fd1fda8cc50>
 
-for char in reverse('golf'):
+for char in golf:
+    print(char)
+# f
+# l
+# o
+# g
+
+
+def reverse2(data):
+    yield from reverse(data)
+
+
+for char in reverse2('golf'):
     print(char)
 # f
 # l
