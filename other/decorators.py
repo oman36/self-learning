@@ -159,3 +159,46 @@ def other_func(val1, val2, string=None):
 
 
 other_func(1, 1, 'hello')
+
+from functools import wraps
+
+
+def dirty_logged(func):
+    def with_logging(*args, **kwargs):
+        """wrapper docstring"""
+        print(func.__name__ + " was called")
+        return func(*args, **kwargs)
+
+    return with_logging
+
+
+def logged(func):
+    @wraps(func)
+    def with_logging(*args, **kwargs):
+        print(func.__name__ + " was called")
+        return func(*args, **kwargs)
+
+    return with_logging
+
+
+@logged
+def original_func(x):
+    """does some math"""
+    return x + x * x
+
+
+@dirty_logged
+def dirty_original_func(x):
+    """does some math"""
+    return x + x * x
+
+
+print(original_func.__name__)
+# original_func
+print(original_func.__doc__)
+# does some math
+
+print(dirty_original_func.__name__)
+# with_logging
+print(dirty_original_func.__doc__)
+# wrapper docstring
