@@ -35,3 +35,13 @@ print(a ^ b)
 a = {x for x in 'abracadabra' if x not in 'abc'}
 print(a)
 # {'r', 'd'}
+
+# Sets are mutable:
+a.add('e')
+print(a)
+# {'r', 'd', 'e'}
+
+# Frozenset are immutable:
+b = frozenset(('r', 'd'))
+print(hasattr(b, 'add'))
+# False
