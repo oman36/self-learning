@@ -111,3 +111,34 @@ print(next(generator))
 # 22
 generator.close()
 # Don't forget to clean up when 'close()' is called.
+
+
+# Simple coroutine with for loop works:
+
+def pack_a():
+    for k in range(4):
+        L = []
+        for i in range(2):
+            L.append((yield))
+        print(L)
+
+
+pa = pack_a()
+next(pa)
+pa.send(1)
+pa.send(2)
+# [1, 2]
+
+
+# If using list comprehension (generator expression), it fails:
+def pack_b():
+    for j in range(4):
+        L = [(yield) for i in range(2)]
+        print(L)
+
+
+pb = pack_b()
+# <generator object pack_b.<locals>.<listcomp> at 0x7f17423fceb8>
+# <generator object pack_b.<locals>.<listcomp> at 0x7f17423fce60>
+# <generator object pack_b.<locals>.<listcomp> at 0x7f17423fceb8>
+# <generator object pack_b.<locals>.<listcomp> at 0x7f17423fce60>
