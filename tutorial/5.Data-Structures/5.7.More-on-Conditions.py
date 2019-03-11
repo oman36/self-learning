@@ -15,6 +15,19 @@ print([3] is [3])
 print((3, 2) is (3, 2))
 # False
 
+nan = float('NaN')
+print(nan is nan)
+# True
+
+# the defined non-reflexive behavior of NaN
+print(nan == nan)
+# False
+
+# list enforces reflexivity and tests identity first
+print([nan] == [nan])
+# True
+
+
 # Comparisons can be chained.
 # For example, a < b == c tests whether a is less than b and moreover b equals c.
 
