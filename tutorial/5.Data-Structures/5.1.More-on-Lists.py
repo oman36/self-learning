@@ -90,3 +90,19 @@ print(danger_list)
 safe_list[0]['value'] = 'new'
 print(safe_list)
 # [{'value': 'new'}, {'value': 'original'}, {'value': 'original'}]
+
+danger_list2 = ['val'] * 3
+safe_list2 = ['val' for _ in range(3)]
+
+print(danger_list2)
+# ['val', 'val', 'val']
+print(safe_list2)
+# ['val', 'val', 'val']
+
+danger_list2[0] = 'new'
+print(danger_list2)
+# ['new', 'val', 'val']
+
+safe_list2[0] = 'new'
+print(safe_list2)
+# ['new', 'val', 'val']
