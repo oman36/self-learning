@@ -55,7 +55,7 @@ def enter_plus_exit(path, mode, *args, **kwargs):
 with MyContextManager('some_file.txt', 'w') as f:
     f.write('Hello world')
     print('end of first block')
-# yield
+# return object
 # end of first block
 # close
 
