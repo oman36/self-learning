@@ -31,3 +31,13 @@ squares[2:4] = []
 print(squares)
 # [1, 4, 103, 25, 49]
 
+x = [0, 1]
+i = 0
+print(i)
+# 0
+
+# i is updated, then x[i] is updated
+i, x[i] = 1, 2
+print(x, i)
+# [0, 2] 1
+
