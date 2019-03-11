@@ -26,6 +26,10 @@ print((17.5 % 3).__class__)
 # <class 'float'>
 print(2 ** 7)  # 2 to the power of 7
 # 128
+print(divmod(17.5, 3))
+# 5.0, 2.5
+print(divmod(17.5, 3) == (17.5 // 3, 17.5 % 3))
+# True
 
 # !!! In interactive mode, the last printed expression is assigned to variable `_` (lowerdash)
 # >>> tax = 12.5 / 100
