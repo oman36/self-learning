@@ -1,3 +1,4 @@
+# Sets do not save ordering
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 print(basket)
 # {'orange', 'banana', 'pear', 'apple'}

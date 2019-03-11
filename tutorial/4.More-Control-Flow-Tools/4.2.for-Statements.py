@@ -13,7 +13,7 @@ for w in words[:]:
 print(words)
 # ['defenestrate', 'cat', 'window', 'defenestrate']
 
-# Enumerate for key - value:
+# Enumerate for index - value:
 for i, v in enumerate(['tic', 'tac', 'toe']):
     print(i, v)
 # 0 tic
