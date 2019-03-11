@@ -22,3 +22,27 @@ def fu(a, li=None):
         li = []
     li.append(a)
     return li
+
+
+print(fu(1))
+# [1]
+print(fu(2))
+# [1]
+print(fu(3))
+# [1]
+
+
+def fun(a, b):
+    print(a, b)
+
+fun(b=1, *(2,))
+# 2 1
+
+try:
+    fun(a=1, *(2,))
+except TypeError as e:
+    print(e)
+# fun() got multiple values for keyword argument 'a'
+
+fun(1, *(2,))
+# 1 2
