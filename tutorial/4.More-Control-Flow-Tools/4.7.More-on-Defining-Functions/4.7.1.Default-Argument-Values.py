@@ -27,9 +27,9 @@ def fu(a, li=None):
 print(fu(1))
 # [1]
 print(fu(2))
-# [1]
+# [2]
 print(fu(3))
-# [1]
+# [3]
 
 
 def fun(a, b):
