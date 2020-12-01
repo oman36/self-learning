@@ -35,7 +35,8 @@ print([nan] == [nan])
 # is equivalent to
 # `(A and (not B)) or C`
 
-# If `A` and `C` are true but `B` is false, `A and B and C` does not evaluate the expression `C`:
+# If `A` and `C` are true but `B` is false, `A and B and C` does not evaluate
+# the expression `C`:
 def func(string: str, flag: bool = False) -> bool:
     print(string, flag)
     return flag
@@ -56,6 +57,7 @@ empty_list = []
 
 string2, string3 = 'Trondheim', 'Hammer Dance'
 
-non_null = empty_string or the_none or zero or empty_set or empty_tuple or empty_list or string2 or string3
+non_null = empty_string or the_none or zero or empty_set or empty_tuple or empty_list \
+           or string2 or string3
 print(non_null)
 # Trondheim
