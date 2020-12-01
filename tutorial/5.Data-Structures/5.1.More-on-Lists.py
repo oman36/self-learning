@@ -4,6 +4,15 @@ print([x ** 2 for x in range(10)])
 print([(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y])
 # [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
 
+# more readable
+print([
+    (x, y)
+    for x in [1, 2, 3]
+    for y in [3, 1, 4]
+    if x != y
+])
+# [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
 combs = []
 for x in [1, 2, 3]:
     for y in [3, 1, 4]:
@@ -46,6 +55,14 @@ print([(x, x ** 2) for x in range(6)])
 print([num for elem in [[1, 2, 3], [4, 5, 6], [7, 8, 9]] for num in elem])
 # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+# flatten a list using a list comp with two 'for'
+print([
+    num
+    for group in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    for num in group
+])
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 
 matrix = [
     [1, 2, 3, 4],
@@ -56,7 +73,7 @@ matrix = [
 broken_matrix = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
-    [9, 10, 11, ],
+    [9, 10, 11, ],  # <- three numbers
 ]
 
 print([[row[col] for row in matrix] for col in range(len(matrix[0]))])
