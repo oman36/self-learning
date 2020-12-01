@@ -9,6 +9,13 @@ print(tel)
 
 del tel['sape']
 # {'jack': 4098, 'guido': 4127}
+try:
+    del tel['sape']
+except KeyError:
+    pass
+
+# silent deleting
+tel.pop('sape', None)
 
 print(list(tel))
 # ['jack', 'guido']
