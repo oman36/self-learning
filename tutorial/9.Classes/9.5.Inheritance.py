@@ -89,7 +89,7 @@ class Result1(Child, OtherClass):
 print(*Result1.__mro__, sep='\n')
 # <class '__main__.Result1'>
 # <class '__main__.Child'>
-# <class '__main__.Parrent'>
+# <class '__main__.Parent'>
 # <class '__main__.OtherClass'>
 # <class 'object'>
 
