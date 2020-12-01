@@ -25,17 +25,17 @@ for i in ['val1', 'val2', 'val3']:
     if i == 'val4':
         break
 else:
-    print('this message was show, because "break" was not happened')
+    print('this message was show, because "break" didn\'t happen')
 # val1
 # val2
 # val3
-# this message was show, because "break" was not called
+# this message was show, because "break" didn't happen
 
 for i in ['val1', 'val2', 'val3']:
     print(i)
     if i == 'val2':
         break
 else:
-    print('this message will not shown, because "break" was happened')
+    print('this message will not shown, because "break" happened')
 # val1
 # val2
