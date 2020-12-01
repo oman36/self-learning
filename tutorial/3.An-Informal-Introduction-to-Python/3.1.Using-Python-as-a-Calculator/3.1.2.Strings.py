@@ -21,7 +21,7 @@ Usage: thingy [OPTIONS]
 # String leterals can be concatenated without '+'
 'one ' 'two' == 'one two'
 
-# This feature is particulary useful when you want to break long strings:
+# This feature is particularly useful when you want to break long strings:
 text = ('Put several strings within parentheses '
         'to have them joined together.')
 
@@ -41,6 +41,9 @@ print(word[-1])
 
 print(word[2:5])
 # tho
+
+print(word[-3:-1])
+# ho
 
 print(word[42:45])
 # 
