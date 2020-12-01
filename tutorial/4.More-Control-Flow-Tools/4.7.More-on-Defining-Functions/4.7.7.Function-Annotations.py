@@ -1,4 +1,4 @@
-# annotations do nothing
+# annotations don't do anything
 def fun(ham: str, eggs: str = 'eggs') -> str:
     return ham + ' and ' + eggs
 
