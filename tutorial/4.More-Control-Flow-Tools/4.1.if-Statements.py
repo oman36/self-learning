@@ -11,4 +11,6 @@ else:
     print('More')
 
 data = None
+# next 2 lines are equal
 data = {} if data is None else data
+data = data is None and {} or data
