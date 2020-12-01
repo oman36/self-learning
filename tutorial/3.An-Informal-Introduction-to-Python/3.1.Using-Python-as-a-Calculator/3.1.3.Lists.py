@@ -23,7 +23,7 @@ print(new_list)
 squares[2] = 36
 print(squares)
 # [1, 4, 36, 16, 25]
-squares = [1, 4, 9, 16, 25]
+
 # You can also add new item at the end of the list, by using the `append()` method:
 squares.append(49)
 print(squares)
